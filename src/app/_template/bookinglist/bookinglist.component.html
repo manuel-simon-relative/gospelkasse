@@ -1,0 +1,26 @@
+<div class="content">
+    <table>
+        <tr>
+            <th class="datum">Datum</th>
+            <th class="betrag">Betrag</th>
+            <th class="grund">Grund</th>
+            <th class="kategorie">Kategorie</th>
+            <th class="bemerkung">Bemerkung</th>
+        </tr>
+        <tr class="booking" *ngFor='let b of this.bookings'>
+            <td class="datum">{{b.datum | date:"dd.MM.yyyy"}}</td>
+            <td class="betrag">{{b.betrag | number:'1.2-2'}} €</td>
+            <td class="grund">{{b.grund}}</td>
+            <td class="kategorie">{{b.kategorie}}</td>
+            <td class="bemerkung">{{b.bemerkung}}</td>
+        </tr>
+        <tr class="ergebnis">
+            <td>Summe:</td>
+            <td class='betrag'>{{this.summe | number:'1.2-2'}} €</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+</div>
